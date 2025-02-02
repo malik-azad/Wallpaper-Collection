@@ -1,0 +1,84 @@
+body {
+    background: #1d1d1d;
+    color: #fff;
+    font-family: 'Poppins', 'Open Sans', Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+a {
+    color: #fff;
+}
+
+.title {
+    margin-top: 2em;
+}
+
+.footer {
+    margin-top: 2em;
+    color: #aaa;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.icons svg:hover {
+    cursor: pointer;
+    filter: drop-shadow(0px 0px 2px rgb(255 255 255 / 0.4))
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 1em;
+    width: calc(100% - 2em);
+    max-width: 3600px;
+    margin: auto;
+}
+
+.gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    min-height: 122px;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: 0.1s ease-in-out;
+    position: relative;
+}
+
+.gallery img:hover {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.glightbox-clean .gslide-description {
+    background: #1d1d1d
+}
+
+div.gslide-desc {
+    color: #fff;
+}
+
+.gallery img.loading {
+    aspect-ratio: 16 / 9;
+    color: transparent;
+    background: linear-gradient(0.25turn, transparent, #3c3c3c, transparent), linear-gradient(#2c2c2c, #2c2c2c);
+    background-repeat: no-repeat;
+    background-position: -315px 0, 0 0;
+    animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+    to {
+        background-position: 315px 0, 0 0;
+    }
+}
